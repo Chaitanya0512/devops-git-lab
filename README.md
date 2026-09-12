@@ -1,4 +1,4 @@
 My first git repository
-Learning Git for DevOps Fundamentals
+Learning Advanced Git for DevOps Fundamentals
 This change should be kept
 This README was updated from a feature branch
