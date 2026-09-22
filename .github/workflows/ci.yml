@@ -1,4 +1,4 @@
-name: CI Pipeline
+\name: CI Pipeline
 
 on:
   push:
@@ -67,7 +67,7 @@ jobs:
           name: calculator-package
           path: dist/
 
-    deploy:
+  deploy:
     needs: build
     runs-on: ubuntu-latest
 
