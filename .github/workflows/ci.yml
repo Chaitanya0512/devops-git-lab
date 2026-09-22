@@ -66,3 +66,22 @@ jobs:
         with: 
           name: calculator-package
           path: dist/
+
+    deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v5
+        with:
+          name: calculator-package
+          path: deployment/
+
+      - name: Verify artifact
+        run: |
+          echo "Files received for deployment:"
+          ls -lh deployment/
+
+      - name: Deploy application
+        run: echo "Deploying calculator application..."
