@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+calculator_app/__init__.py
+calculator_app/calculator.py
+calculator_app.egg-info/PKG-INFO
+calculator_app.egg-info/SOURCES.txt
+calculator_app.egg-info/dependency_links.txt
+calculator_app.egg-info/top_level.txt
