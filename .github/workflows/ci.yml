@@ -90,3 +90,23 @@ jobs:
         run: |
           echo "Deployment token received."
           echo "Deploying calculator application..."
+
+  deploy-production:
+    needs: deploy
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v5
+        with:
+          name: calculator-package
+          path: deployment/
+
+      - name: Verify artifact
+        run: |
+          echo "Files received for production:"
+          ls -lh deployment/
+
+      - name: Deploy application
+        run: echo "Deploying calculator application to production..."
